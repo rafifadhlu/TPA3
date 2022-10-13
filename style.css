@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Ubuntu+Condensed&display=swap');
+
+:root{
+    --bg-color : #FF74B1;
+    --second-color : #CFFF8D;
+    --op-color : #FFA1CF;
+    --neutral-color : rgb(216, 216, 216);
+    --black-neutral : rgb(44, 44, 44);
+    --up-vote : rgb(137, 255, 137);
+    --down-vote : rgb(157, 255, 118)
+    font-family: 'Passions Conflict', cursive;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: black;
+
+}
+
+*{
+    padding:0;
+    margin:0;
+}
+
+.container{
+    background-color:var(--bg-color);
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+nav{
+    width: 100%;
+    height:50px;
+    background-color:var(--op-color);
+    position:fixed;
+}
+.navbar-wrap{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding:0px 50px 0px 50px;
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+input{
+    border-radius: 4px;
+    width: 100%;
+    border: none;
+    text-align: center;
+}
+.search button{
+    background-color:rgb(27, 107, 255);
+    color:white;
+    width:6em;
+    height:2em;
+}
+
+#card-wrapper{
+    width:100%;
+    height:fit-content;
+    justify-content:center;
+    margin: 10px;
+    align-items:center;
+    display: grid;
+    margin-top: 100px;
+    grid-template-columns:auto auto auto ;
+    gap: 10em;
+}
+
+.card{
+    background-image: linear-gradient(0deg, rgb(243, 241, 241) 80%, rgb(221, 219, 219) 20%);
+    width:20em;
+    height:30em;
+    border-radius: 20px;
+    box-shadow: 7px 5px 20px -2px rgb(75, 75, 75);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.title{
+    color: var(--black-neutral);
+    justify-content:center;
+}
+
+.user-input{
+    height:70%;
+}
+
+.user-input form{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    padding-top: 50px;
+    height:100%;
+}
+
+form label{
+    padding: 10px;
+}
+
+form input{
+    padding: 10px;
+    border-radius: 5px;
+    width:80%;
+    border: none;
+}
+
+button{
+    background-color: green;
+    color: var(--neutral-color);
+    font-weight: bold;
+    border:none;
+    height:8%;
+    width:100%;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: rgb(0, 84, 117);
+    transition: ease-in-out 1ms;
+}
+
+#result{
+    height: 20px;
+    padding: 5px;
+}
+
+.item-card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+h1{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 1em;
+}
+
+img{
+    width: 20em;
+    height: 20em;
+    object-fit: cover;
+}
+
+p{
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-weight: bold;
+    width: 80%;
+    height: 20%;
+}
+
+h2{
+    height: 20%;
+    font-weight: lighter;
+    
+}
+.voteRatingup {
+    background-color: var(--up-vote);
+}
+
+.voteRatingdown{
+    background-color: var(--down-vote);
+}
+
+@media only screen and (min-width :1500px){
+    #card-wrapper{
+        width: 100%;
+        gap: 2em;
+    }
+}
+@media only screen and (max-width :1500px){
+    #card-wrapper{
+        width: 100%;
+        gap: 5em;
+    }
+}
+@media only screen and (max-width :1200px){
+    #card-wrapper{
+        width: 100%;
+        gap: 2em;
+    }
+}
+
+@media only screen and (max-width :1000px){
+    #card-wrapper{
+        width: 100%;
+        gap: 2em;
+        display: grid;
+        grid-template-columns:auto auto ;
+    }
+}
+
+@media only screen and (max-width :700px){
+    #card-wrapper{
+        width: 100%;
+        gap: 2em;
+        display: grid;
+        grid-template-columns:auto;
+    }
+}
